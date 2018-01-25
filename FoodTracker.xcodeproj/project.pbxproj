@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6703B4DA2017DEF200C5D931 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6703B4D92017DEF200C5D931 /* RatingControl.swift */; };
+		67EBCF7D2019445A007F14DF /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBCF7C2019445A007F14DF /* Meal.swift */; };
+		67EBCF8120194D8B007F14DF /* CFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 67EBCF7F20194D8B007F14DF /* CFile.c */; };
 		94BEF00F2016A8010005DD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BEF00E2016A8010005DD72 /* AppDelegate.swift */; };
 		94BEF0112016A8010005DD72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BEF0102016A8010005DD72 /* ViewController.swift */; };
 		94BEF0142016A8010005DD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BEF0122016A8010005DD72 /* Main.storyboard */; };
@@ -28,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		6703B4D92017DEF200C5D931 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		67EBCF7C2019445A007F14DF /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		67EBCF7E20194D8B007F14DF /* FoodTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FoodTracker-Bridging-Header.h"; path = "FoodTrackerTests/FoodTracker-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		67EBCF7F20194D8B007F14DF /* CFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CFile.c; path = FoodTracker/CFile.c; sourceTree = SOURCE_ROOT; };
+		67EBCF8020194D8B007F14DF /* CFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFile.h; path = FoodTracker/CFile.h; sourceTree = SOURCE_ROOT; };
 		94BEF00B2016A8010005DD72 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BEF00E2016A8010005DD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94BEF0102016A8010005DD72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,9 +85,13 @@
 		94BEF00D2016A8010005DD72 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				67EBCF7F20194D8B007F14DF /* CFile.c */,
+				67EBCF8020194D8B007F14DF /* CFile.h */,
+				67EBCF7E20194D8B007F14DF /* FoodTracker-Bridging-Header.h */,
 				94BEF00E2016A8010005DD72 /* AppDelegate.swift */,
 				94BEF0102016A8010005DD72 /* ViewController.swift */,
 				6703B4D92017DEF200C5D931 /* RatingControl.swift */,
+				67EBCF7C2019445A007F14DF /* Meal.swift */,
 				94BEF0122016A8010005DD72 /* Main.storyboard */,
 				94BEF0152016A8010005DD72 /* Assets.xcassets */,
 				94BEF0172016A8010005DD72 /* LaunchScreen.storyboard */,
@@ -149,6 +159,7 @@
 				TargetAttributes = {
 					94BEF00A2016A8010005DD72 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					94BEF01E2016A8010005DD72 = {
@@ -202,8 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67EBCF7D2019445A007F14DF /* Meal.swift in Sources */,
 				94BEF0112016A8010005DD72 /* ViewController.swift in Sources */,
 				6703B4DA2017DEF200C5D931 /* RatingControl.swift in Sources */,
+				67EBCF8120194D8B007F14DF /* CFile.c in Sources */,
 				94BEF00F2016A8010005DD72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,10 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodTrackerTests/FoodTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -357,10 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodTrackerTests/FoodTracker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

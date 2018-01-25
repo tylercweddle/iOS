@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RatingControl: UIStackView {
+@IBDesignable class RatingControl: UIStackView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -34,30 +34,35 @@ class RatingControl: UIStackView {
     //MARK: Private Methods
     
     private func setupButtons() {
-        //Create Big Red Button
-        let button = UIButton()
-        button.backgroundColor = UIColor.red
         
-        //Add viusal constraints
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
-        
-        //Set up button action
-        button.addTarget(self, action: #selector(self.ratingButtonTapped(button:)), for: .touchUpInside)
-        
-        //Add button to stack (using UIStackView)
-        addArrangedSubview(button)
+        for _ in 0..<starCount {
+            //Create Big Red Button
+            let button = UIButton()
+            button.backgroundColor = UIColor.red
+            
+            //Add viusal constraints
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
+            button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
+            
+            //Set up button action
+            button.addTarget(self, action: #selector(self.ratingButtonTapped(button:)), for: .touchUpInside)
+            
+            //Add button to stack (using UIStackView)
+            addArrangedSubview(button)
+        }
     }
     
     //MARK: Button Action
     
     func ratingButtonTapped(button: UIButton) {
-        num_pressed = num_pressed + 1
-        var extra_s = ""
-        if (num_pressed != 1) {
-            extra_s = "s"
-        }
-        print("The button was pressed ", num_pressed, " time",extra_s)
+        print("The button was pressed:")
+        let f = five()
+        print(f)
+        print(addition(1,2))
     }
+    
+    //MARK: Properties
+    @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0)
+    @IBInspectable var starCount: Int = 5
 }
