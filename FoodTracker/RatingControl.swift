@@ -56,10 +56,12 @@ import UIKit
     //MARK: Button Action
     
     func ratingButtonTapped(button: UIButton) {
-        print("The button was pressed:")
-        let f = five()
-        print(f)
-        print(addition(1,2))
+        let o = Objct()
+        o.hello_world()
+        print("made it here")
+        
+        print(five())
+        print(addition(2,2))
     }
     
     //MARK: Properties
