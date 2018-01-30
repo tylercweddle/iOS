@@ -10,10 +10,14 @@
 #define Objc_tutorial_h
 #import <Foundation/Foundation.h>
 
+#import "CFile.h"
 @interface Objct : NSObject
 
 -(int)hello_world;
-
+-(int)arith:(int) a :(int) b;
+-(double)squared :(double)a;
+-(double*) fold_squared :(double*)a;
+-(NSString*) str_append :(NSString*) s1 :(NSString*) s2;
 @end
 
 #endif /* Objc_tutorial_h */

@@ -33,8 +33,8 @@
 /* Begin PBXFileReference section */
 		6703B4D92017DEF200C5D931 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		6777F42F201BCD21003F6943 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
-		6777F431201BD0C6003F6943 /* Objc_tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Objc_tutorial.m; sourceTree = "<group>"; };
-		6777F433201BD36D003F6943 /* Objc_tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objc_tutorial.h; sourceTree = "<group>"; };
+		6777F431201BD0C6003F6943 /* Objc_tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Objc_tutorial.m; path = FoodTracker/Objc_tutorial.m; sourceTree = "<group>"; };
+		6777F433201BD36D003F6943 /* Objc_tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Objc_tutorial.h; path = FoodTracker/Objc_tutorial.h; sourceTree = "<group>"; };
 		67EBCF7C2019445A007F14DF /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		67EBCF7E20194D8B007F14DF /* FoodTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FoodTracker-Bridging-Header.h"; path = "FoodTrackerTests/FoodTracker-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		67EBCF7F20194D8B007F14DF /* CFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CFile.c; path = FoodTracker/CFile.c; sourceTree = SOURCE_ROOT; };
@@ -69,9 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		674261C2201FC92900B6F15D /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				67EBCF7F20194D8B007F14DF /* CFile.c */,
+				67EBCF8020194D8B007F14DF /* CFile.h */,
+				6777F433201BD36D003F6943 /* Objc_tutorial.h */,
+				6777F431201BD0C6003F6943 /* Objc_tutorial.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
 		94BEF0022016A8010005DD72 = {
 			isa = PBXGroup;
 			children = (
+				674261C2201FC92900B6F15D /* Objective-C */,
 				94BEF00D2016A8010005DD72 /* FoodTracker */,
 				94BEF0222016A8010005DD72 /* FoodTrackerTests */,
 				94BEF00C2016A8010005DD72 /* Products */,
@@ -91,15 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				67EBCF7E20194D8B007F14DF /* FoodTracker-Bridging-Header.h */,
-				67EBCF7F20194D8B007F14DF /* CFile.c */,
-				67EBCF8020194D8B007F14DF /* CFile.h */,
 				94BEF00E2016A8010005DD72 /* AppDelegate.swift */,
 				94BEF0102016A8010005DD72 /* ViewController.swift */,
 				6703B4D92017DEF200C5D931 /* RatingControl.swift */,
 				67EBCF7C2019445A007F14DF /* Meal.swift */,
 				94BEF0122016A8010005DD72 /* Main.storyboard */,
-				6777F433201BD36D003F6943 /* Objc_tutorial.h */,
-				6777F431201BD0C6003F6943 /* Objc_tutorial.m */,
 				6777F42F201BCD21003F6943 /* MealTableViewCell.swift */,
 				94BEF0152016A8010005DD72 /* Assets.xcassets */,
 				94BEF0172016A8010005DD72 /* LaunchScreen.storyboard */,

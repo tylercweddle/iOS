@@ -57,11 +57,20 @@ import UIKit
     
     func ratingButtonTapped(button: UIButton) {
         let o = Objct()
-        o.hello_world()
-        print("made it here")
+        //print(o.arith(FIVE, 6))
+        //print(o.squared(4.0))
         
-        print(five())
-        print(addition(2,2))
+        //Passing in arrays/pointers, etc.
+        /*
+        let f_arr = UnsafeMutablePointer<Double>.allocate(capacity: 8)
+        f_arr.initialize(from: [1.0, 2.0, 3.0, 4.0], count:4)
+        print(o.fold_squared(f_arr).pointee) //first value
+        print(o.fold_squared(f_arr + 2).pointee) //third value
+        */
+        
+        //print(o.str_append("Hello ", "World!"))
+        
+        
     }
     
     //MARK: Properties
