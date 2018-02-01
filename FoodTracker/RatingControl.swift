@@ -57,6 +57,9 @@ import UIKit
     
     func ratingButtonTapped(button: UIButton) {
         let o = Objct()
+        print(o.str_append("Hello ", "World!"))
+        
+        
         //print(o.arith(FIVE, 6))
         //print(o.squared(4.0))
         
@@ -68,7 +71,7 @@ import UIKit
         print(o.fold_squared(f_arr + 2).pointee) //third value
         */
         
-        //print(o.str_append("Hello ", "World!"))
+        
         
         
     }

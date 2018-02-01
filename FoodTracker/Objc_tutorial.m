@@ -16,6 +16,12 @@
     return 0;
 }
 
+-(NSString*) str_append :(NSString*) s1 :(NSString*) s2
+{
+    return [s1 stringByAppendingString:s2];
+}
+
+
 /*
  *For playing around with arithmetic and function calls
  */
@@ -43,11 +49,6 @@
         to_return[i] = squared_block(a[i]);
     }
     return to_return;
-}
-
--(NSString*) str_append :(NSString*) s1 :(NSString*) s2
-{
-    return [s1 stringByAppendingString:s2];
 }
 
 //Example of a block
