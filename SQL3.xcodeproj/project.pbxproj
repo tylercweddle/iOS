@@ -12,6 +12,8 @@
 		6768F9F32033B9EA00E217F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6768F9F12033B9EA00E217F9 /* Main.storyboard */; };
 		6768F9F52033B9EA00E217F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6768F9F42033B9EA00E217F9 /* Assets.xcassets */; };
 		6768F9F82033B9EA00E217F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6768F9F62033B9EA00E217F9 /* LaunchScreen.storyboard */; };
+		6768FA072033C08C00E217F9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6768FA002033B9FA00E217F9 /* libsqlite3.tbd */; };
+		6768FA0F2033C6A900E217F9 /* Sqlite3DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768FA0E2033C6A900E217F9 /* Sqlite3DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		6768F9F42033B9EA00E217F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6768F9F72033B9EA00E217F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6768F9F92033B9EA00E217F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6768FA002033B9FA00E217F9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6768FA022033BA9A00E217F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6768FA0D2033C51B00E217F9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		6768FA0E2033C6A900E217F9 /* Sqlite3DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sqlite3DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6768FA072033C08C00E217F9 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				6768F9EC2033B9EA00E217F9 /* SQL3 */,
 				6768F9EB2033B9EA00E217F9 /* Products */,
+				6768F9FF2033B9FA00E217F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +68,19 @@
 				6768F9F42033B9EA00E217F9 /* Assets.xcassets */,
 				6768F9F62033B9EA00E217F9 /* LaunchScreen.storyboard */,
 				6768F9F92033B9EA00E217F9 /* Info.plist */,
+				6768FA0D2033C51B00E217F9 /* Bridging-Header.h */,
+				6768FA0E2033C6A900E217F9 /* Sqlite3DBManager.swift */,
 			);
 			path = SQL3;
+			sourceTree = "<group>";
+		};
+		6768F9FF2033B9FA00E217F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6768FA022033BA9A00E217F9 /* libsqlite3.0.tbd */,
+				6768FA002033B9FA00E217F9 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6768FA0F2033C6A900E217F9 /* Sqlite3DBManager.swift in Sources */,
 				6768F9F02033B9EA00E217F9 /* ViewController.swift in Sources */,
 				6768F9EE2033B9EA00E217F9 /* AppDelegate.swift in Sources */,
 			);
@@ -266,6 +286,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paradymemanagement.SQL3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "SQL3/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -301,6 +322,7 @@
 				6768F9FE2033B9EA00E217F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

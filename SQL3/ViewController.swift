@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let a :Attraction = Attraction(name: "", website:"",days:"[1,0,1,1,1,1,0]",
+                                       map:"", cost:"",address: "")
     }
 
     override func didReceiveMemoryWarning() {
