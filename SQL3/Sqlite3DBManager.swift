@@ -11,7 +11,8 @@ import Foundation
 
 class Sqlite3DBManager {
     
-    let query = "SELECT * FROM Attractions"
+    let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        .appendingPathComponent("HeroesDatabase.sqlite")
     
     var stmt_ptr : OpaquePointer?
     
@@ -20,19 +21,20 @@ class Sqlite3DBManager {
 
 class Attraction {
     private var name: String
-    private var website: String
+    private var web_url: String
     private var days: [Int]
     private var map: String
     private var cost_lower: Double
     private var cost_upper: Double
-    private var address: String
+    private var street_address: String
+    private var photo_url: String
     
-    init(name: String, website: String, days: String, map: String, cost: String, address: String) {
+    init(name: String, website: String, days: String, map: String, cost: String, address: String, photo: String) {
         self.name = name
-        self.website = website
+        self.web_url = website
         self.map = map
-        self.address = address
-        
+        self.street_address = address
+        self.photo_url = photo
         
         //Parse days string
         
