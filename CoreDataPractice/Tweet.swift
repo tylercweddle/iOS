@@ -12,9 +12,9 @@ import CoreData
 class Tweet: NSManagedObject {
     
     
-    class func findTweet(name: String, in context: NSManagedObjectContext) throws -> Tweet {
+    /*func findTweet(name: String, in context: NSManagedObjectContext) throws -> Tweet {
         let fetch_request: NSFetchRequest<Tweet> = Tweet.fetchRequest()
-        fetch_request.predicate = NSPredicate(format: "unique = %@", name)
+        fetch_request.predicate = NSPredicate(format: "name = %@", name)
         
         do {
             let matches = try context.fetch(fetch_request)
@@ -26,10 +26,11 @@ class Tweet: NSManagedObject {
         }
         
         let tweet = Tweet(context: context)
-        tweet.unique = "a"
+        tweet.unique = "ree"
         tweet.text = name
         tweet.created = nil
         tweet.tweeter = try? TwitterUser.findTwitterUser(handle: name, in: context)
         return tweet
-    }
+    }*/
+    
 }
