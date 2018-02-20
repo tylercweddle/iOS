@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    var container: NSPersistentContainer? =
+        (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    
+    
 }
 

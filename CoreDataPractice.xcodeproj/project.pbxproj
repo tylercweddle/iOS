@@ -15,6 +15,8 @@
 		6731F6D1203CD80D00F416AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6731F6CF203CD80D00F416AC /* LaunchScreen.storyboard */; };
 		6731F6DC203CD80D00F416AC /* CoreDataPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6731F6DB203CD80D00F416AC /* CoreDataPracticeTests.swift */; };
 		6731F6E7203CD80D00F416AC /* CoreDataPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6731F6E6203CD80D00F416AC /* CoreDataPracticeUITests.swift */; };
+		6731F6F7203CDA2000F416AC /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6731F6F6203CDA2000F416AC /* Tweet.swift */; };
+		6731F6F9203CDA4500F416AC /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6731F6F8203CDA4500F416AC /* TwitterUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6731F6E2203CD80D00F416AC /* CoreDataPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6731F6E6203CD80D00F416AC /* CoreDataPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPracticeUITests.swift; sourceTree = "<group>"; };
 		6731F6E8203CD80D00F416AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6731F6F6203CDA2000F416AC /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		6731F6F8203CDA4500F416AC /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,13 @@
 		6731F6C2203CD80D00F416AC /* CoreDataPractice */ = {
 			isa = PBXGroup;
 			children = (
+				6731F6F5203CD84A00F416AC /* SupportingFiles */,
 				6731F6C3203CD80D00F416AC /* AppDelegate.swift */,
 				6731F6C5203CD80D00F416AC /* ViewController.swift */,
 				6731F6C7203CD80D00F416AC /* Main.storyboard */,
-				6731F6CD203CD80D00F416AC /* Assets.xcassets */,
-				6731F6CF203CD80D00F416AC /* LaunchScreen.storyboard */,
-				6731F6D2203CD80D00F416AC /* Info.plist */,
 				6731F6CA203CD80D00F416AC /* CoreDataPractice.xcdatamodeld */,
+				6731F6F6203CDA2000F416AC /* Tweet.swift */,
+				6731F6F8203CDA4500F416AC /* TwitterUser.swift */,
 			);
 			path = CoreDataPractice;
 			sourceTree = "<group>";
@@ -126,6 +130,16 @@
 				6731F6E8203CD80D00F416AC /* Info.plist */,
 			);
 			path = CoreDataPracticeUITests;
+			sourceTree = "<group>";
+		};
+		6731F6F5203CD84A00F416AC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6731F6CD203CD80D00F416AC /* Assets.xcassets */,
+				6731F6CF203CD80D00F416AC /* LaunchScreen.storyboard */,
+				6731F6D2203CD80D00F416AC /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6731F6F9203CDA4500F416AC /* TwitterUser.swift in Sources */,
 				6731F6C6203CD80D00F416AC /* ViewController.swift in Sources */,
 				6731F6CC203CD80D00F416AC /* CoreDataPractice.xcdatamodeld in Sources */,
 				6731F6C4203CD80D00F416AC /* AppDelegate.swift in Sources */,
+				6731F6F7203CDA2000F416AC /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
